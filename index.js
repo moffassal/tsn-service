@@ -70,32 +70,44 @@ function getStationInfo(stationName, type){
   }
   if (stationName == "Ballerup") {
     return [
-      createTrain("Klampenborg", "C", getRandomTrainArrivalData(0), getRandomCarData(0), 2),
-      createTrain("Frederikssund", "C", getRandomTrainArrivalData(1), getRandomCarData(1), 1)
+      createTrain("Klampenborg", "C", getRandomTrainArrivalData(0), [{id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}], 2),
+      createTrain("Frederikssund", "C", getRandomTrainArrivalData(1), [{id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}], 1)
     ];
   }
   else if (stationName == "Flintholm") {
     return [
-      createTrain("Hellerup", "F", getRandomTrainArrivalData(2), getRandomCarData(2), 2),
-      createTrain("Ny Ellebjerg", "F", getRandomTrainArrivalData(3), getRandomCarData(3), 1)
+      createTrain("Hellerup", "F", getRandomTrainArrivalData(2), [{id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}], 2),
+      createTrain("Ny Ellebjerg", "F", getRandomTrainArrivalData(3), [{id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}], 1),
+      createTrain("Ballerup", "C", getRandomTrainArrivalData(3), [{id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}], 1),
+      createTrain("Østerport", "H", getRandomTrainArrivalData(3), [{id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}], 1)
     ];
   }
   else if (stationName == "Jersie") {
     return [
-      createTrain("Køge", "B", getRandomTrainArrivalData(4), getRandomCarData(4), 2),
-      createTrain("Hillerød", "A", getRandomTrainArrivalData(5), getRandomCarData(5), 1)
+      createTrain("Køge", "E", getRandomTrainArrivalData(4), [{id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}], 2),
+      createTrain("Hillerød", "A", getRandomTrainArrivalData(5), [{id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}], 1)
     ];
   }
   else if (stationName == "Ølstykke") {
     return [
-      createTrain("Frederikssund", "E", getRandomTrainArrivalData(6), getRandomCarData(6), 2),
-      createTrain("Klampenborg", "H", getRandomTrainArrivalData(7), getRandomCarData(7), 1)
+      createTrain("Frederikssund", "H", getRandomTrainArrivalData(6), [{id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}], 2),
+      createTrain("Klampenborg", "C", getRandomTrainArrivalData(7), [{id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}], 1)
+    ];
+  }
+  else if (stationName == "Valby") {
+    return [
+      createTrain("Frederikssund", "C", getRandomTrainArrivalData(6), [{id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}], 2),
+      createTrain("Østerport", "H", getRandomTrainArrivalData(7), [{id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}], 1),
+      createTrain("Høje Taastrup", "B", getRandomTrainArrivalData(7), [{id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}], 1),
+      createTrain("Farum", "B", getRandomTrainArrivalData(7), [{id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}], 1),
+      createTrain("Køge", "E", getRandomTrainArrivalData(7), [{id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}], 1),
+      createTrain("Hillerød", "A", getRandomTrainArrivalData(7), [{id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}], 1)
     ];
   }
   else if (stationName == "London") {
     return [
-      createTrain("Hogsmeade", "A", getRandomTrainArrivalData(8), getRandomCarData(8), 9.75),
-      createTrain("Ny Klampenborg", "A", getRandomTrainArrivalData(9), getRandomCarData(9), 9.75)
+      createTrain("Hogsmeade", "A", getRandomTrainArrivalData(8), [{id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}], 9.75),
+      createTrain("Ny Klampenborg", "A", getRandomTrainArrivalData(9), [{id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}, {id: "SB" + random(0, 1000), weight: random(0, 100)}], 9.75)
     ];
   }
   else {
@@ -103,6 +115,7 @@ function getStationInfo(stationName, type){
   }
 }
 
+//4,8,12,16
 const averageWeightPerPerson = 74.4;
 const maxAllowPersonsPerCar = 87.5;
 
