@@ -1,11 +1,30 @@
 {
-  "name": "Train notification service",
-  "dependency": {
-     "restify": "3.10.10"
-   },
-  
-   "scripts": {
-      "start": "node index.js"
-   },
-   "main": "index.js"
+  "name": "Train-Notification-Sample-App",
+  "version": "1.0.0",
+  "description": "Train information notification service",
+  "keywords": [
+    "OpenShift",
+    "Node.js",
+    "Train information service"
+  ],
+  "author": {
+    "name": "Moffassal Hossain",
+    "email": "moffassal@gmail.com"
+  },
+  "homepage": "https://siemens.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moffassal/tsn-service"
+  },
+  "dependencies": {
+    "restify": "3.10.10"
+  },
+ 
+  "scripts": {
+     "start": "node index.js"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+  "private": false,
+  "main": "index.js"
 }
