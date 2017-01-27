@@ -11,7 +11,7 @@ var trainArrivalData = [];
 var trainCarData = [];
 
 var server_port = process.env.OPENSHIFT_NODEJS_PORT || 3000
-var srver_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
 
 
 function getMessages(req, res, next) {
@@ -134,7 +134,7 @@ function createTrain(inDestination, inLine, inEta, inCarts, inPlatform) {
 
 server.get('/getStationInfo', getMessages);
 
-server.listen(server_port,  server_ip_address, (err) => {
+server.listen(server_port, server_ip_address, (err) => {
   if (err) {
     return console.log('something bad happened', err)
   }
