@@ -1,10 +1,5 @@
 {
-  "name": "Train status notification service",
-  "version": "0.1",
-  "description": "An example module to illustrate train notification service ",
-  "author": "Moffassal Hossain <moffassal@gmail.com>", 
-
-  "dependencies": {
-       "restify": "4.0.3"
-   },
+  "dependency": {
+     "restify": "4.0.3"
+   }
 }
