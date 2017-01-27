@@ -1,7 +1,7 @@
 {
   "dependency": {
      "restify": "4.0.3"
-   }
+   },
   
    "scripts": {
       "start": "node index.js"
