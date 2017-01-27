@@ -17,7 +17,7 @@
     "url": "https://github.com/moffassal/tsn-service"
   },
   "dependencies": {
-    "restify": "3.10.10"
+    "restify": "4.3.0"
   },
  
   "scripts": {
