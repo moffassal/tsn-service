@@ -1,8 +1,6 @@
 // content of index.js
 var restify = require('restify');
-// var feeder = require('feeder.js');
 var server = restify.createServer();
-// server.use(restify.bodyParser());
 server.use(restify.queryParser());
 
 var d = new Date();
@@ -12,8 +10,9 @@ var firstTimeGeneratingCars;
 var trainArrivalData = [];
 var trainCarData = [];
 
-// const http = require('http');
-const port = 3000;
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 3000
+var srver_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+
 
 function getMessages(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -105,7 +104,6 @@ function getStationInfo(stationName, type){
   }
 }
 
-//4,8,12,16
 const averageWeightPerPerson = 74.4;
 const maxAllowPersonsPerCar = 87.5;
 
@@ -134,35 +132,12 @@ function createTrain(inDestination, inLine, inEta, inCarts, inPlatform) {
   };
 }
 
-// function postMessages(req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header("Access-Control-Allow-Headers", "X-Requested-With");
-//
-//   res.send("POST test");
-// }
-
 server.get('/getStationInfo', getMessages);
-// server.post('/messages', postMessages);
 
-// var requestHandler = (request, response) => {
-//   console.log(request.url);
-//   response.contentType = 'json';
-//
-//   var data = [
-//     {data1: 'hello', data2: 'world2'}
-//   ];
-//
-//   console.log(JSON.stringify(data));
-//
-//   response.send(200, "test");
-//
-//   // response.end('Hello Node.js Server!')
-// }
-
-server.listen(port, (err) => {
+server.listen(server_port,  server_ip_address, (err) => {
   if (err) {
     return console.log('something bad happened', err)
   }
 
-  console.log(`server is listening on ${port}`)
+  console.log(`server is listening on ${server_port}`)
 })

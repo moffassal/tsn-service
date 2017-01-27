@@ -1,11 +1,11 @@
 {
+  "name": "Train notification service",
   "dependency": {
-     "restify": "4.0.3"
+     "restify": "3.10.10"
    },
   
    "scripts": {
       "start": "node index.js"
    },
    "main": "index.js"
- 
 }
